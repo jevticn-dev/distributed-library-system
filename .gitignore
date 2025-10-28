@@ -1,0 +1,33 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Eclipse (ako neko koristi)
+.settings/
+*.classpath
+*.project
+
+# Build folders
+target/
+bin/
+out/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Spring Boot / Java build artifacts
+*.class
+*.jar
+*.war
+spring-boot-devtools.properties
+
+# Maven / Gradle
+.mvn/
+*.mvn/
+.build/
+.gradle/

@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: reader-service
+              uri: lb://READER-SERVICE
+              predicates:
+                - Path=/api/readers/**
+            - id: loan-service
+              uri: lb://LOAN-SERVICE
+              predicates:
+                - Path=/api/loans/**
+            - id: library-service
+              uri: lb://LIBRARY-SERVICE
+              predicates:
+                - Path=/api/books/**
+  security:
+    user:
+      name: admin
+      password: password123
+      roles: ADMIN
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
