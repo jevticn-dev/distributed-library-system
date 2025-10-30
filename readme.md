@@ -55,6 +55,7 @@ Svi pozivi se rutiraju preko **API Gateway-a** na `http://localhost:8080` koji j
 | **GET** | `/api/loans/{id}/reader` | **Agregacioni Endpoint:** Dohvatanje pozajmice sa detaljima čitaoca (Preko Feign-a) |
 | **DEL** | `/api/loans/{id}` | Brisanje pozajmice (`Delete loan`) |
 
+
 ### 4.2. Readers API (`reader-service`)
 
 | Metoda | Putanja (Primer) | Opis |
@@ -65,6 +66,9 @@ Svi pozivi se rutiraju preko **API Gateway-a** na `http://localhost:8080` koji j
 | **PUT** | `/api/readers/{id}` | Ažuriranje čitaoca (`Update reader`) |
 | **GET** | `/api/readers/{id}` | Dohvatanje čitaoca po ID-u (`Get reader by id`) |
 | **DEL** | `/api/readers/{id}` | Brisanje čitaoca (`Delete reader`) |endpoint. |
+
+**Napomena:**
+Pri gašenju `reader-service`-a u demonstraciji poziva nakon ponovnog uključivanja prvih **6-7** poziva će biti neuspešno dok se servis u potpunosti ne oporavi
 
 ## 5. API Dokumentacija (Swagger/OpenAPI)
 
