@@ -17,10 +17,7 @@ spring:
           uri: lb://LOAN-SERVICE
           predicates:
             - Path=/api/loans/**
-        - id: library-service
-          uri: lb://LIBRARY-SERVICE
-          predicates:
-            - Path=/api/books/**
+
   security:
     user:
       name: admin

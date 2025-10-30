@@ -6,7 +6,7 @@ spring:
     name: reader-service
 
   datasource:
-    url: jdbc:h2:mem:readersdb
+    url: jdbc:h2:file:./data/readersdb
     driver-class-name: org.h2.Driver
     username: sa
     password:
